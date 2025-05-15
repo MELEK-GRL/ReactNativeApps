@@ -12,7 +12,7 @@ function App(): React.JSX.Element {
 
 const styles = StyleSheet.create({
   sectionContainer: {
-    backgroundColor: 'yellow',
+    backgroundColor: 'red',
     flex: 1,
   },
 });
