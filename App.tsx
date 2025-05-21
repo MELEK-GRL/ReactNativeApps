@@ -1,11 +1,12 @@
 import React from 'react';
 
 import {StyleSheet, Text, View} from 'react-native';
+import Navigation from './src/navigation/Navigation';
 
 function App(): React.JSX.Element {
   return (
     <View style={styles.sectionContainer}>
-      <Text>ANA SAYFAAA</Text>
+      <Navigation />
     </View>
   );
 }
