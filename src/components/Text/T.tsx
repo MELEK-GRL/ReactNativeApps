@@ -1,23 +1,27 @@
 import {useTheme} from '@react-navigation/native';
-import React, {ReactNode} from 'react';
-import {StyleSheet, Text, TextStyle, TextProps} from 'react-native';
+import React from 'react';
+import {StyleSheet, Text, TextStyle, TextProps, StyleProp} from 'react-native';
 import {FONTS} from '../../theme/Fonts/Typography';
 import {CustomTheme} from '../../theme/LightTheme';
 
-interface NewTProps extends TextProps {
-  children: ReactNode;
+interface TProps extends TextProps {
+  children?: React.ReactNode;
   color?: string;
   font?: TextStyle;
   maxLine?: number;
   textAlign?: 'auto' | 'left' | 'right' | 'center' | 'justify';
+  style?: StyleProp<TextStyle>;
+  size?: number;
 }
 
-const NewT: React.FC<NewTProps> = ({
+const T: React.FC<TProps> = ({
   children,
   color,
   font,
   maxLine = 1,
   textAlign = 'left',
+  style,
+  size,
   ...rest
 }) => {
   const theme = useTheme();
@@ -25,11 +29,13 @@ const NewT: React.FC<NewTProps> = ({
 
   const textColor = color || colors.neutral900;
   const textFont = font || FONTS.bodyRegular;
+  const fontSize = size || undefined;
 
   const styles = StyleSheet.create({
     textColor: {
       color: textColor,
       textAlign: textAlign,
+      fontSize: fontSize,
     },
   });
 
@@ -38,7 +44,7 @@ const NewT: React.FC<NewTProps> = ({
 
   return (
     <Text
-      style={[textFont, styles.textColor]}
+      style={[textFont, styles.textColor, style]}
       numberOfLines={maxLine !== 0 ? maxLine : undefined}
       {...rest}>
       {childrenText}
@@ -46,4 +52,4 @@ const NewT: React.FC<NewTProps> = ({
   );
 };
 
-export default NewT;
+export default T;

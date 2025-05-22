@@ -16,6 +16,18 @@ const neutralColors = {
     neutral700: '#3D4249',
     neutral800: '#292D32',
     neutral900: '#070C18',
+
+    primary100: "#4f54a3",
+
+    loginBackground: [
+        '#d6c9e7',
+        '#f7f6f9',
+        '#d1d9ec',
+        '#aebef2',
+    ],
+
+
+
 };
 
 // CustomTheme arayüzünü genişlet

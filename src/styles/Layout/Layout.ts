@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-    headerContent: { backgroundColor: 'red' },
+    headerContent: { backgroundColor: 'red', flex: 1 },
 
 });
 
