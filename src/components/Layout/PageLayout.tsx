@@ -7,7 +7,7 @@ type LayoutProps = {
   title?: string;
 };
 
-const PageLayout = ({children, title}: LayoutProps) => {
+const PageLayout = ({children}: LayoutProps) => {
   return (
     <SafeAreaView>
       <View style={styles.headerContent}>

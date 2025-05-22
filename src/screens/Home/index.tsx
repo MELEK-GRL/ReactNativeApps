@@ -1,8 +1,8 @@
 import React from 'react';
 import {Text} from 'react-native';
 
-const index = () => {
+const Home = () => {
   return <Text>HOME</Text>;
 };
 
-export default index;
+export default Home;

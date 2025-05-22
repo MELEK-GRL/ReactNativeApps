@@ -1,10 +1,9 @@
-import React from 'react';
-
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Login from '../screens/Login';
 import Home from '../screens/Home';
 import Chat from '../screens/Chat';
+import {LightTheme} from '../theme/LightTheme';
 
 type RootStackParamList = {
   Login: undefined;
@@ -14,9 +13,9 @@ type RootStackParamList = {
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
-const Navigation = () => {
+const Router = () => {
   return (
-    <NavigationContainer>
+    <NavigationContainer theme={LightTheme}>
       <Stack.Navigator
         initialRouteName="Login"
         screenOptions={{headerShown: false}}>
@@ -28,4 +27,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default Router;
