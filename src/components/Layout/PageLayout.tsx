@@ -1,6 +1,6 @@
 import React from 'react';
 import {SafeAreaView, View} from 'react-native';
-import styles from '../../styles/Layout/Layout';
+import useStyles from '../../styles/Layout/Layout';
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -8,6 +8,7 @@ type LayoutProps = {
 };
 
 const PageLayout = ({children}: LayoutProps) => {
+  const styles = useStyles();
   return (
     <SafeAreaView>
       <View style={styles.headerContent}>

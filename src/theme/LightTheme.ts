@@ -25,6 +25,7 @@ const neutralColors = {
         '#d1d9ec',
         '#aebef2',
     ],
+    buttonColors: ['#aebef2', '#d1d9ec', '#f7f6f9'],
 
 
 
